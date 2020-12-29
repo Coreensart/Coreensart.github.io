@@ -7,7 +7,7 @@ name = "Coreen"
 description = "Hi, I'm Coreen. I'm an artist, DIY'er and cook."
 
 # the profile image of the author to display in the sidebar
-gravatar = "" # md5 hash of your email address # sidebar.html
+gravatar = "3b23d20bbce78c5de1bcd7098aa870ba" # md5 hash of your email address # sidebar.html
 
 # contact links to reach the author
 #  - `name` is the font-awesome char name

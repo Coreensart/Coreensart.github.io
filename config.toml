@@ -20,7 +20,7 @@ logo = "/logo.png"
 
 version = "1.0.1"
 copyrightyear = "2020"
-disqus_short_name = "peacefulhappylife" # leave blank if you don't want disqus
+disqus_short_name = "PeacefulHappyLife" # leave blank if you don't want disqus
 
 # Where are tags and categories displayed
 tag_page = "/tags/"

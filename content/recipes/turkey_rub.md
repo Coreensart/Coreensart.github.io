@@ -29,4 +29,3 @@ Let it rest a few minutes before carving.
 Enjoy the turkey and the reactions of your impressed friends and family. 😊
 
 Hint: If you want extra moistness, try cooking the turkey upside down. Just remember to tuck those wings on the underside of whichever way you choose before cooking.
-Submit a Comment
