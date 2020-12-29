@@ -13,12 +13,8 @@ gravatar = "" # md5 hash of your email address # sidebar.html
 #  - `name` is the font-awesome char name
 #  - `path` is the link to follow 
 contact = [
-  { name = "linkedin", path = "https://www.linkedin.com/in/svavs" },
-  { name = "github", path = "https://github.com/svavs" },
-  # { name = "facebook", path = "https://" },
+  { name = "facebook", path = "https://" },
   { name = "twitter", path = "https://twitter.com/svavs" },
   { name = "instagram", path = "https://instagram.com/svavs" },
-  { name = "lastfm", path = "https://www.last.fm/user/svavsa" },
-  { name = "tumblr", path = "http://svavs.tumblr.com/" },
   { name = "email", path = "" }
 ]

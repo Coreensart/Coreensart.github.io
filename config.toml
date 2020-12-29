@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://peacefulhappylife.com/"
+base_url = "https://peacefulhappylife.com"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -13,6 +13,7 @@ build_search_index = true
 
 # Set theme
 theme = "codinfox-zola"
+title = "Peaceful Happy Life"
 
 [extra]
 logo = "/logo.png"
