@@ -15,6 +15,10 @@
         {%   set iconname = contact.name %}
         {%   if contact.name == 'email' %}
         {%     set iconname = 'envelope' %}
+        {%   elif iconname == 'tiktok' %}
+        {%     set iconname = 'music' %}
+        {%   elif iconname == 'quora' %}
+        {%     set iconname = 'question' %}
         {%   endif %}
         <a href="{{ contact.path }}">
           <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>

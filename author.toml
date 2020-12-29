@@ -13,8 +13,9 @@ gravatar = "923727035da6d31ffa53b88d4812ac8d" # md5 hash of your email address #
 #  - `name` is the font-awesome char name
 #  - `path` is the link to follow 
 contact = [
-  { name = "facebook", path = "https://" },
-  { name = "twitter", path = "https://twitter.com/svavs" },
-  { name = "instagram", path = "https://instagram.com/svavs" },
-  { name = "email", path = "" }
+  { name = "pinterest", path = "https://pinterest.com/Lexingtton/_saved/" },
+  { name = "facebook", path = "https://facebook.com/thepeacefulhapplife/" },
+  { name = "instagram", path = "https://instagram.com/peacefulhappylife" },
+  { name = "twitter", path = "https://twitter.com/PeacefulHappyL1" },
+  { name = "tiktok", path = "https://tiktok.com/@peacefulhappylife" },
 ]
