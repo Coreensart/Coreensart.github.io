@@ -13,23 +13,25 @@ name = "Home"
 path = "/"
 
 [[nav]]
+name = "Recipes"
+path = "/recipes/"
+
+[[nav]]
+name = "DIY"
+path = "/diy/"
+
+[[nav]]
+name = "Art"
+path = "/art/"
+
+[[nav]]
+name = "Spiritual"
+path = "/spiritual/"
+
+[[nav]]
 name = "Blog"
 path = "/blog/"
-haschild = true  # Blog is a section with submenu navigation items
-
-  # sub-items of the Blog section
-  [[nav.sub]]
-  name = "Categories"
-  path = "/categories/"
-
-  [[nav.sub]]
-  name = "Tags"
-  path = "/tags/"
 
 [[nav]]
 name = "About"
 path = "/about/"
-
-[[nav]]
-name = "Github Project"
-path = "https://github.com/svavs/codinfox-zola"

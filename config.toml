@@ -15,7 +15,7 @@ build_search_index = true
 theme = "codinfox-zola"
 
 [extra]
-logo = "/mylogo_2.png"
+logo = "/logo.png"
 
 version = "1.0.1"
 copyrightyear = "2020"
