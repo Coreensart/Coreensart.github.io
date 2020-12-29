@@ -14,26 +14,6 @@
           </article>
         </div>
 
-        <div class="related">
-          <h2>Other Posts</h2>
-          <ul class="related-posts">
-            <li class="previous">
-            {% if page.earlier %}
-                <small>Earlier {</small>
-                <a href="{{ page.earlier.permalink }}">{{ page.earlier.title }}</a>
-                <small>}</small>
-            {% endif %}
-            </li>
-            <li class="next">
-            {% if page.later %}
-                <small>{</small>
-                <a href="{{ page.later.permalink }}">{{ page.later.title }}</a>
-                 <small>} Later</small>
-            {% endif %}
-            </li>
-          </ul>
-        </div>
-
         {% if config.extra.disqus_short_name %}
         <div class="comments">
           <h2>Comments</h2>
