@@ -11,5 +11,24 @@ highlight_code = false
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+# Set theme
+theme = "codinfox-zola"
+
 [extra]
-# Put all your custom variables here
+logo = "/mylogo_2.png"
+
+version = "1.0.1"
+copyrightyear = "2020"
+disqus_short_name = "codinfox-zola" # leave blank if you don't want disqus
+
+# Where are tags and categories displayed
+tag_page = "/tags/"
+category_page = "/categories/"
+
+# hero
+image = "/img/curiosity_by_starsinmyfingertips_dakioyj-fullview.jpg"  # image for the home page
+caption = "Original Artwork &copy; <a href=\"https://www.deviantart.com/starsinmyfingertips/art/Curiosity-639126235\">2016 - 2020 StarsInMyFingertips</a>"  # caption for the home page image
+#
+
+# show or not the reading time based on https://help.medium.com/hc/en-us/articles/214991667-Read-time
+read_time = true
