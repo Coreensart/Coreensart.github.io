@@ -13,15 +13,8 @@
       <div class="sidebar-personal-info-section">
         {% for contact in contacts %}
         {%   set iconname = contact.name %}
-        {%   if contact.name == 'email' %}
-        {%     set iconname = 'envelope' %}
-        {%   elif iconname == 'tiktok' %}
-        {%     set iconname = 'music' %}
-        {%   elif iconname == 'quora' %}
-        {%     set iconname = 'question' %}
-        {%   endif %}
-        <a href="{{ contact.path }}">
-          <i class="fa fa-{{ iconname }}" aria-hidden="true"></i>
+        <a href="{{ contact.path }}" target="_blank">
+          <i class="fab fa-{{ iconname }}" aria-hidden="true"></i>
         </a>
         {%   set current_index = current_index + 1 %}
         {%   if current_index != len %}|{% endif %}

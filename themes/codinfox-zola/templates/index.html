@@ -9,71 +9,85 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-  <head>
-    {{ head::links() }}
-    {{ head::meta() }}
+    <head>
+        {{ head::links() }}
+        {{ head::meta() }}
 
-    {% block pagetitle %}
-    {{ head::titlesite(page_title = "Home") }}
-    {% endblock pagetitle %}
+        {% block pagetitle %}
+            {{ head::titlesite(page_title = "Home") }}
+        {% endblock pagetitle %}
 
-    {{ head::css() }}
+        {{ head::css() }}
 
-    {{ head::icons() }}
+        {{ head::icons() }}
 
-    {{ head::rss() }}
+        {{ head::rss() }}
+    </head>
 
-    {{ head::mathjax() }}
-  </head>
+    <body>
 
-  <body>
+        {# sidebar #}
+        <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+            <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
 
-    {# sidebar #}
-    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-        styles, `#sidebar-checkbox` for behavior. -->
-    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+            <!-- Toggleable sidebar -->
+            <div class="sidebar" id="sidebar">
+                {{ sidebar::personal_info(gravatar = author.gravatar, description = author.description, contacts = author.contact) }}
 
-    <!-- Toggleable sidebar -->
-    <div class="sidebar" id="sidebar">
-      {{ sidebar::personal_info(gravatar = author.gravatar, description = author.description, contacts = author.contact) }}
+                {% block navigation_list %}
+                    {{ sidebar::nav(navlist = sidebar_nav.nav, page_permalink = config.base_url) }}
+                {% endblock navigation_list %}
 
-      {% block navigation_list %}
-      {{ sidebar::nav(navlist = sidebar_nav.nav, page_permalink = config.base_url) }}
-      {% endblock navigation_list %}
+                {{ sidebar::copyright(author_name = author.name) }}
 
-      {{ sidebar::copyright(author_name = author.name) }}
+                {{ scripts::changing_words() }}
+            </div>
+            {# ### #}
 
-      {{ scripts::changing_words() }}
-    </div>
-    {# ### #}
+            <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+                content to avoid any CSS collisions with our real content. -->
+                <div class="wrap">
 
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
+                    {% block masthead %}
+                        {{ macros::masthead(current_url=config.base_url) }}
+                    {% endblock masthead %}
 
-      {% block masthead %}
-      {{ macros::masthead(current_url=config.base_url) }}
-      {% endblock masthead %}
+                    <div class="container content">
 
-      <div class="container content">
+                        {% block content %}
+                            <div class="hero">
+                                <img src="{{ get_url(path=config.extra.image) }}" />
+                                <p>{{ config.extra.caption | safe }}</p>
+                            </div>
 
-        {% block content %}
-	      <div class="hero">
-          <img src="{{ get_url(path=config.extra.image) }}" />
-	        <p>{{ config.extra.caption | safe }}</p>
-	      </div>
-        {% endblock content %}
+                            <h2>Updates</h2>
+                            {% for sitesection in section.subsections %}
+                            {% set subsection = get_section(path=section.subsections | nth(n=loop.index0)) %}
+                            <h3>Recent {{ subsection.title }}</h3>
+                            <ul class="post_list">
+                                {% for page in subsection.pages | slice(end=4) %}
+                                    <li>
+                                        <a href="{{ page.permalink }}">{{ page.title }}</a>
+                                    </li>
+                                {% else %}
+                                    <p>Coming soon!</p>
+                                {% endfor %}
 
-      </div>
-    </div>
+                            </ul>
+                        {% endfor %}
+                        {% endblock content %}
 
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+                    </div>
+                </div>
 
-    {{ scripts::sidebar_script() }}
+                <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+                {{ scripts::sidebar_script() }}
 
 
-  </body>
+    </body>
 
-  {{ scripts::disqus() }}
+    {{ scripts::disqus() }}
 
 </html>
